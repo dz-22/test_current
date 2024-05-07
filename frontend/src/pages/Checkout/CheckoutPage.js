@@ -10,6 +10,7 @@ import Title from '../../components/Title/Title';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import OrderItemsList from '../../components/OrderItemsList/OrderItemsList';
+import { incrQuantity } from '../../services/foodService';
 export default function CheckoutPage() {
   const { cart } = useCart();
   const { user } = useAuth();
@@ -56,6 +57,7 @@ export default function CheckoutPage() {
               height="3rem"
               onClick={createOrder}
             />
+            {decrQuantity}
           </div>
         </div>
       </form>

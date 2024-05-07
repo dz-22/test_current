@@ -5,6 +5,9 @@ export const getAll = async () => {
   return data;
 };
 
+export const decrQuantity = async (food) =>{
+ await axios.put('/api/foods',food);
+}
 export const search = async searchTerm => {
   const { data } = await axios.get('/api/foods/search/' + searchTerm);
   return data;
@@ -38,3 +41,4 @@ export async function add(food) {
   const { data } = await axios.post('/api/foods', food);
   return data;
 }
+
